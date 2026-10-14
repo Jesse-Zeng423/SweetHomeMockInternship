@@ -2031,7 +2031,8 @@ public class PlanComponent extends JComponent implements PlanView, Scrollable, P
 
     try {
       this.home.setSelectedLevel(levelsToPrint.get(pageIndex));
-      return printSelectedLevel(g, pageFormat, 0);
+      printSelectedLevel(g, pageFormat, 0);
+      return PAGE_EXISTS;
     } finally {
       this.home.setSelectedLevel(originallySelected);
     }
